@@ -1,0 +1,134 @@
+body {
+    background-image: url('https://static.vecteezy.com/ti/vetor-gratis/p1/2150235-fundo-colorido-desenhado-a-mao-vetor.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0; /* Removendo margens padrão do body */
+    padding: 0; /* Removendo preenchimento padrão do body */
+}
+
+.container {
+    text-align: center;
+    margin-top: 1%; /* Margem superior em porcentagem para ser responsivo */
+}
+.container h1 {
+    color: rgb(247, 0, 226);
+}
+
+
+.list_card {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.number-container {
+    position: relative;
+    margin: 1%; /* Margem entre os elementos em porcentagem */
+}
+
+.number {
+    display: inline-block;
+    width: 10vw; /* Largura em relação à largura da viewport */
+    height: 10vw; /* Altura em relação à largura da viewport */
+    max-width: 50px; /* Largura máxima em pixels */
+    max-height: 50px; /* Altura máxima em pixels */
+    background-color: #4ae85dfe; /* verde claro */
+    border-radius: 50%;
+    line-height: 50px; /* Centraliza o texto verticalmente */
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.number:hover {
+    background-color: #08c424; /* verde mais escuro no hover */
+}
+
+.selected .number {
+    background-color: red; /* Vermelho para números selecionados */
+}
+
+.name {
+    display: none;
+    position: absolute;
+    top: -60%; /* Distância do número em porcentagem */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: rgb(0, 0, 0); /* Cor do texto */
+}
+
+.number-container:hover .name {
+    display: block;
+}
+
+.number-container.selected {
+    background-color: red;
+    border-radius: 50%;
+}
+
+#resetButton {
+    padding: 1% 3%; /* Preenchimento em porcentagem */
+    margin-top: 3%; /* Margem superior em porcentagem */
+    background-color: #FF5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+    
+#resetButton:hover {
+    background-color: #e37f7f;
+}
+
+#downloadPDFButton{
+    padding: 1% 3%; /* Preenchimento em porcentagem */
+    margin-top: 3%; /* Margem superior em porcentagem */
+    background-color: #31d428;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#downloadPDFButton:hover {
+    background-color: #aefe89;
+}
+
+#sorteador{
+    padding: 1% 3%; /* Preenchimento em porcentagem */
+    margin-top: 3%; /* Margem superior em porcentagem */
+    background-color: #d428c6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#sorteador:hover {
+    background-color: #fe89e9;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .number {
+        width: 20vw; /* Ajusta a largura em relação à largura da viewport para dispositivos menores */
+        height: 20vw; /* Ajusta a altura em relação à largura da viewport para dispositivos menores */
+    }
+
+    #resetButton, #downloadPDFButton {
+        padding: 2% 5%; /* Aumenta o preenchimento em dispositivos menores */
+        margin-top: 5%; /* Aumenta a margem superior em dispositivos menores */
+        font-size: 1rem; /* Ajusta o tamanho da fonte para melhor leitura */
+    }
+}

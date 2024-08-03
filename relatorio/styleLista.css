@@ -1,0 +1,114 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-image: url('https://img.freepik.com/free-psd/3d-rendering-beauty-banner_23-2150159871.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    color: rgb(255, 0, 179);
+}
+
+.list_columns {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.column {
+    color: rgb(0, 0, 0);
+    padding: 3px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+.number-container {
+    margin-bottom: 10px; /* Espaçamento entre os números */
+    display: flex;
+    align-items: center;
+}
+
+button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #e50099f7;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff94d4;
+}
+/* Responsividade para telas pequenas */
+@media (max-width: 600px) {
+    .number {
+        width: 20vw;
+        height: 20vw;
+        line-height: 20vw;
+    }
+
+    #resetButton, #downloadPDFButton {
+        padding: 2% 5%;
+        margin-top: 5%;
+        font-size: 1rem;
+    }
+}
+/* Responsividade para telas pequenas */
+@media (max-width: 375px) and (max-height: 667px) {
+    .number {
+        width: 60vw; /* Ajuste para telas pequenas */
+        height: 60vw; /* Ajuste para telas pequenas */
+        line-height: 60vw; /* Ajuste para telas pequenas */
+        font-size: 1.1rem; /* Ajuste para telas pequenas */
+    }
+
+    button {
+        font-size: 0.8rem; /* Ajuste para telas pequenas */
+    }
+}
+
+/* Responsividade para iPhone X e dispositivos similares */
+@media (min-width: 375px) and (min-height: 812px), (min-width: 414px) and (min-height: 896px) {
+    .number {
+        width: 20vw; /* Ajuste para telas maiores */
+        height: 20vw; /* Ajuste para telas maiores */
+        line-height: 20vw; /* Ajuste para telas maiores */
+        font-size: 1.2rem; /* Ajuste para telas maiores */
+    }
+
+    button {
+        font-size: 1rem; /* Ajuste para telas maiores */
+    }
+}
+
+
+
+@media screen and (max-width: 1250px) {
+    .container {
+        width: 90%; /* Reduz a largura do container */
+    }
+
+    .number {
+        width: 20vw; /* Ajuste para telas médias */
+        height: 20vw; /* Ajuste para telas médias */
+        line-height: 20vw; /* Ajuste para telas médias */
+        font-size: 1.2rem; /* Ajuste para telas médias */
+    }
+
+    button {
+        font-size: 1rem; /* Ajuste para telas médias */
+    }
+}
